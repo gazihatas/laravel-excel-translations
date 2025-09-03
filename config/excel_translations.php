@@ -19,6 +19,15 @@ return [
         'fallback_locale' => env('EXCEL_TRANSLATIONS_FALLBACK', config('app.fallback_locale', 'en')),
     ],
 
+    'events' => [
+        'enabled' => env('EXCEL_TRANSLATIONS_EVENTS', true),
+        'auto_initialize' => env('EXCEL_TRANSLATIONS_AUTO_INIT', false),
+        'auto_check' => env('EXCEL_TRANSLATIONS_AUTO_CHECK', false),
+        'check_interval' => env('EXCEL_TRANSLATIONS_CHECK_INTERVAL', 60),
+        'notify_on_change' => env('EXCEL_TRANSLATIONS_NOTIFY', false),
+        'watch_interval' => env('EXCEL_TRANSLATIONS_WATCH_INTERVAL', 5),
+    ],
+
     'aws' => [
         'key'    => env('AWS_ACCESS_KEY_ID'),
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
